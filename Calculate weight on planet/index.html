@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planet</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: black;
+    }
+
+    #heading {
+      margin: 2rem;
+      color: aqua;
+    }
+
+    .input,
+    select,
+    button {
+      padding: .5rem;
+      margin: 10px;
+    }
+
+    input {
+      padding: .5rem;
+      width: 180px;
+      margin: 10px;
+    }
+
+    .imgAndh1 {
+      height: 500px;
+      width: 900px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      color: white;
+    }
+
+    .imgAndh1 img {
+      /* height: 90%; */
+      width: 50%;
+
+
+    }
+
+  
+  </style>
+</head>
+
+<body>
+  <h1 id="heading">Calculate weight of an Object on a planet</h1>
+  <div class="input">
+    <input id="inputWeight" type="number" placeholder="enter a mass">
+    <select name="selectPlanet" id="selectPlanet"></select>
+    <button onclick="clcWight()">Calculate weight</button>
+  </div>
+  <div class="imgAndh1">
+
+    <img id="image" src="" alt="">
+    <p id="topRight"></p>
+    <h1 id="h1"></h1>
+  </div>
+
+
+  <script>
+    const planets = [
+      { planetName: "Sun", gravity: 27.9, image: "https://res.cloudinary.com/dtpgi0zck/image/upload/s--fMAvJ-9u--/c_fit,h_580,w_860/v1/EducationHub/photos/sun-blasts-a-m66-flare.jpg" },
+      { planetName: "Moon", gravity: 0.1655, image: "https://www.exploratorium.edu/ronh/weight/images/moon.gif" },
+      { planetName: "Mercury", gravity: 0.377, image: "https://www.exploratorium.edu/ronh/weight/images/mercury.gif" },
+      { planetName: "Venus", gravity: 0.903, image: "https://www.exploratorium.edu/ronh/weight/images/venus.gif" },
+      { planetName: "Earth", gravity: 1, image: "https://cdn.pixabay.com/photo/2011/12/13/14/31/earth-11015__340.jpg" },
+      { planetName: "Mars", gravity: 0.3895, image: "https://www.exploratorium.edu/ronh/weight/images/mars.gif" },
+      { planetName: "Jupiter", gravity: 2.640, image: "https://www.exploratorium.edu/ronh/weight/images/jupiter.gif" },
+      { planetName: "Saturn", gravity: 1.139, image: "https://www.exploratorium.edu/ronh/weight/images/saturn.gif" },
+      { planetName: "Uranus", gravity: 0.917, image: "https://www.exploratorium.edu/ronh/weight/images/uranus.gif" },
+      { planetName: "Neptune", gravity: 1.148, image: "https://www.exploratorium.edu/ronh/weight/images/neptune.gif" },
+
+
+    ]
+
+    planets.map((ele) => {
+      const options = document.createElement("option")
+      options.innerHTML = ele.planetName
+      options.value = ele.gravity
+      options.setAttribute("name", ele.image)
+
+      const select = document.getElementById("selectPlanet")
+      select.appendChild(options)
+
+      var image = ele.image
+
+    })
+
+    function clcWight() {
+      var mass = +document.getElementById("inputWeight").value
+
+
+      const select = document.getElementById("selectPlanet")
+      var selectedIndex = select.selectedIndex
+      const selectedOption = select.options[selectedIndex]
+
+      console.log(selectedOption);
+      const gravity = +selectedOption.value
+
+
+      const weight = mass * gravity
+
+
+      const h1 = document.getElementById("h1")
+      var error = "Please enter your mass"
+
+      if (mass == "") {
+        h1.innerText = error
+      }
+      else if (mass < 0) {
+        h1.innerText = "Please enter mass greater than 0"
+      }
+      else {
+       
+        h1.innerText ="Weight on Planet is :- "+ weight + " kg"
+        var imgsrc = selectedOption.getAttribute("name")
+        const img = document.getElementById("image")
+        img.src = imgsrc
+      }
+
+
+
+
+    }
+
+
+  </script>
+</body>
+
+</html>

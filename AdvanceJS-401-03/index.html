@@ -1,0 +1,92 @@
+<!-- Slider image Assignment -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+
+        }
+
+        .maincontainer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+
+        }
+
+        .icon {
+            width: 100%;
+            height: 15%;
+            position: absolute;
+            top: 40%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        i {
+            font-size: 5rem;
+            color: white;
+            padding: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="maincontainer">
+        <img src="https://blog.geekster.in/wp-content/uploads/2021/11/top-6-awesome-t-Jobs-in-Demand-2022-featured-Image.png"
+            alt="image" id="slider-img" />
+        <div class="icon">
+            <i onclick="nextImg()" class="fa fa-caret-left" aria-hidden="true"></i>
+            <i onclick="prevImg()" class="fa fa-caret-right" aria-hidden="true"></i>
+        </div>
+    </div>
+
+    <script>
+        var img = [];
+        img[0] = "./1-image.png";
+        img[1] = "./2-image.png";
+        img[2] = "./3-image.png";
+        img[3] = "./4-image.png";
+        i = 0;
+        let image = document.getElementById("slider-img");
+
+        setInterval("nextImg()", 2000);
+
+        function nextImg() {
+            if (i < img.length - 1) i++;
+            else i = 0;
+            image.src = img[i];
+        }
+
+        function prevImg() {
+            i--;
+            if (i == -1) i = 3;
+            image.src = img[i];
+        }
+    </script>
+</body>
+
+</html>

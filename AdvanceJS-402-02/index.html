@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .head {
+            display: flex;
+            flex-direction: column;
+            height: 25vh;
+            width: 50vw;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        .head h1 {
+            font-size: 40px;
+            color: olive;
+        }
+
+        .card {
+            height: 200px;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            color: olive;
+        }
+
+        .img {
+            background-image: url(./logo.png);
+            width: 60%;
+            height: 60px;
+            background-size: 100% 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <h1>Geekster</h1>
+        <h3>click on the button to add image element</h3>
+        <button onclick="hello()">click here</button>
+    </div>
+
+    <script>
+        function hello() {
+
+            var div = document.createElement("div")
+            div.classList.add("card")
+            var h1 = document.createElement("h1")
+            var h1Text = document.createTextNode("Image Element Added")
+            var divimg = document.createElement("div")
+            divimg.classList.add("img")
+            h1.appendChild(h1Text)
+            div.appendChild(h1)
+            div.appendChild(divimg)
+            document.body.appendChild(div)
+        }
+    </script>
+</body>
+
+</html>

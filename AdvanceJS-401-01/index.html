@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+           
+        }
+
+        .mainDiv {
+            height: 50vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 20px;
+
+        }
+
+        .mainDiv input {
+            height: 50px;
+            width: 300px;
+            padding: 10px;
+            border: 2px solid palevioletred;
+            margin: 2rem;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainDiv">
+        <input onkeypress="hello()" id="name" type="text">
+        <p></p>
+    </div>
+
+    <script>
+        function hello() {
+
+            var name = document.getElementById("name").value
+            var greeting = name
+            var para = document.getElementsByTagName("p")
+            para[0].innerHTML = greeting
+
+
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .maincontainer {
+            border: 2px solid red;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+
+        }
+
+        .cart {
+            width: 100%;
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            margin: 0.3rem;
+        }
+
+        button {
+            margin: 0.3rem;
+            width: 5rem;
+            height: 1rem;
+        }
+
+        .cartlist {
+            width: 50%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main" class="maincontainer">
+
+        <h1>My shopping list</h1>
+        <div class="cart">
+            <label> Enter a new item:</label>
+            <input id="item" type="text">
+            <button onclick=" additem()">Add item</button>
+        </div>
+
+    </div>
+
+
+    <script>
+        var main = document.getElementById("main")
+
+        function additem() {
+            var div = document.createElement("div")
+            div.classList.add("cartlist")
+            var ul = document.createElement("ul")
+            var li = document.createElement("li")
+            ul.appendChild(li)
+            div.appendChild(ul)
+            var item = document.getElementById("item").value
+            li.innerText = item
+            var button = document.createElement("button")
+            button.innerText = "Delete"
+            li.appendChild(button)
+            button.style.marginLeft = "3rem"
+
+            button.addEventListener("click", (event) => {
+                div.remove();
+            })
+
+            main.appendChild(div)
+            document.body.appendChild(main)
+
+            if (item == "") {
+                div.innerText = ""
+            }
+
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>

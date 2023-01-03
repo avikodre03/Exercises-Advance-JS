@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .maindiv {
+            border: 2px solid red;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .box {
+            border: 2px solid red;
+            height: 35px;
+            width: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="maindiv">
+        <div class="box">1st child</div>
+        <div class="box">2nd child</div>
+        <div class="box">3rd child</div>
+        <div class="box">4th child</div>
+        <div class="box">5th child</div>
+        <div class="box">6th child</div>
+        <div class="box">7th child</div>
+        <div class="box">8th child</div>
+        <div class="box">9th child</div>
+        <div class="box">10th child</div>
+        <div class="box">11th child</div>
+        <div class="box">12th child</div>
+        <div class="box">13th child</div>
+        <div class="box">14th child</div>
+        <div class="box">15th child</div>
+        <div class="box">16th child</div>
+        <div class="box">17th child</div>
+        <button onclick="hello()">click me</button>
+    </div>
+
+    <script>
+        function hello() {
+            let even = document.getElementsByClassName("box");
+            for (let i = 0; i < even.length; i++) {
+                if (i % 2 == 1) {
+                    even[i].setAttribute('style', 'background-color:lime')
+                    even[i].style.color = 'white'
+                }
+            }
+            even[0].setAttribute('style', 'background-color:blue')
+            even[0].style.color = 'white'
+            even[8].setAttribute('style', 'background-color:green')
+            even[8].style.color = 'white'
+            even[even.length - 1].setAttribute('style', 'background-color:palevioletred')
+            even[even.length - 1].style.color = 'white'
+
+        }
+    </script>
+</body>
+
+</html>

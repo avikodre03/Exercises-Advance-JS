@@ -68,8 +68,8 @@
         var img = [];
         img[0] = "./1-image.png";
         img[1] = "./2-image.png";
-        img[2] = "./3-image.png";
-        img[3] = "./4-image.png";
+        img[2] = "./4-image.png";
+
         i = 0;
         let image = document.getElementById("slider-img");
 
@@ -83,7 +83,7 @@
 
         function prevImg() {
             i--;
-            if (i == -1) i = 3;
+            if (i == -1) i = 2;
             image.src = img[i];
         }
     </script>

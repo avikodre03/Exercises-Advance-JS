@@ -1,7 +1,8 @@
 # Exercises-Advance-JS
 
 AdvanceJS-401-01
-https://avikodre03.github.io/Exercises-Advance-JS/AdvanceJS-401-01//index
+https://avikodre03.github.io/Exercises-Advance-JS/AdvanceJS-401-01///
+index
 
 AdvanceJS-401-02
 https://avikodre03.github.io/Exercises-Advance-JS/AdvanceJS-401-02/index

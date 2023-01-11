@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 218, 185, 0.762);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.mainUppercontainer {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+
+    background-image: url(https://img.freepik.com/free-photo/binoculars-magnifying-glass-map_23-2147770898.jpg?w=360);
+    background-size: 100% 100%;
+    padding: 3rem 0;
+
+}
+
+
+h1 {
+    letter-spacing: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mainUppercontainer button {
+
+    padding: .5rem 1rem;
+    margin: 1rem 0;
+    color: white;
+    background-color: slateblue;
+
+    border-style: none;
+}
+
+#searchWithAnyWordButton {
+    background-color: blueviolet;
+}
+
+.search {
+    height: 40px;
+    width: 30%;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.search input {
+    height: 100%;
+    width: 80%;
+    border: none;
+    border-radius: 30px;
+    padding: 0 1rem;
+    margin: 0 .5rem;
+}
+
+
+.mainUppercontainer p {
+    color: white;
+    font-size: 18px;
+}
+
+#numberOfSearchResult {
+    font-size: 16px;
+    background-color: red;
+}
+
+.countryCardContanr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 50vh;
+
+    width: 100%;
+
+    overflow-y: scroll;
+}
+
+.countryCardContanrdiv {
+    /* background-color: black; */
+
+    width: 15vw;
+    height: 20vh;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    color: white;
+    font-size: 20px;
+    background-image: url(https://media.istockphoto.com/id/1321506872/photo/blue-earth-digital-technology-business-and-communications-time-lapse-night-city-background.jpg?b=1&s=170667a&w=0&k=20&c=l63ztNz2R4deeIovmxShQQjuBqZThm-GYSfusyJm-XI=);
+  box-shadow: 2px 3px 5px black;
+}

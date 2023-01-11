@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        input , button{
+            height: 30px;
+            width: 200px;
+            margin: 1rem;
+           
+        }
+    </style>
+</head>
+<body>
+<input type="text" onkeyup="inputValueChange()" id="name" placeholder="enter your name">
+<input type="text" onkeyup="inputValueChange()" id="email" placeholder="enter your email">
+<input type="text" onkeyup="inputValueChange()" id="gender" placeholder="enter your gender">
+<input type="text" onkeyup="inputValueChange()" id="phno" placeholder="enter your PhoneNumber">
+
+<button id="submitbutton" disabled="true" >Submit</button>
+
+<script>
+    const name = document.getElementById("name")
+    const email = document.getElementById("email")
+    const gender = document.getElementById("gender")
+    const phno = document.getElementById("phno")
+  
+
+    const button = document.getElementById("submitbutton")
+console.log(button);
+
+    function inputValueChange(){
+        console.log("hello");
+
+        if((name.value==="" || name.value. )|| email.value==="" || gender.value==="" || phno.value===""){
+          
+            button.setAttribute("disabled", "true")
+        }else{
+            button.removeAttribute("disabled","true")
+    
+        }
+    }
+</script>
+</body>
+</html>

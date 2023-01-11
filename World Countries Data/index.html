@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="data.js"></script>
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="mainUpper">
+
+            <h1 style="margin: 0;">World Country Data</h1>
+            <p id="subheading"></p>
+        </div>
+
+
+        <div id="lowerdiv" class="lowerdiv">
+            <div id="buttonContainer" class="buttonContainer">
+                <button id="populationButton" onclick="buttonOneClicked()">Population</button>
+                <button id="languageButton" onclick="buttonTwoClicked()">Language</button>
+                <p id="graphTitle">10 most populated countries in world</p>
+            </div>
+
+
+            <div id="graphContainer" class="graphContainer">
+                <div class="head" id="head">
+                    <p id="pp1"></p>
+                    <p id="pp2"></p>
+                    <p id="pp3"></p>
+
+                </div>
+                <div id="graph" class="graph"></div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

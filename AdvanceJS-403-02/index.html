@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .mainContainer {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            /* justify-content: center; */
+            flex-direction: column;
+            align-items: center;
+            background-color: #283149;
+            justify-content: space-evenly;
+            padding-bottom: 6rem;
+        }
+
+        h1 {
+            font-size: 80px;
+            color: white;
+            text-shadow: 3px 0px #434a5d;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .drumDiv {
+            display: flex;
+            width: 90%;
+            height: fit-content;
+            justify-content: space-evenly;
+            /* border: 2px solid red; */
+            border-radius: 10px;
+        }
+
+        .drum {
+            height: 140px;
+            width: 10%;
+            border: 7px solid #434a5d;
+            border-radius: 10px;
+        }
+
+        button {
+            font-size: 80px;
+            color: #da0463;
+            text-shadow: 3px 0px white;
+
+            font-weight: 600;
+        }
+
+        @media only screen and (min-width: 320px) and (max-width:768px) {
+            .drumDiv {
+                width: 75%;
+                display: flex;
+                flex-direction: column;
+                overflow-y: scroll;
+                align-items: center;
+
+            }
+
+            .drum {
+                height: 140px;
+                width: 60%;
+                margin-top: 2rem;
+            }
+
+            h1 {
+                font-size: 30px;
+                
+            }
+    </style>
+</head>
+
+<body>
+    <div class="mainContainer">
+
+        <h1>Drum 🥁 Kit</h1>
+        <div class="drumDiv">
+            <button class="drum" id="drum"
+                style="background-image: url(./Drum_Kit/images/crash.png); background-size: 100% ;">w</button>
+            <button class="drum" id="drum"
+                style="background-image: url(./Drum_Kit/images/kick.png); background-size: 110% 110%;">a</button>
+            <button class="drum" id="drum"
+                style="background-image: url(./Drum_Kit/images/snare.png); background-size: 100% 100%;">s</button>
+            <button class="drum" id="drum"
+                style="background-image: url(./Drum_Kit/images/tom1.png); background-size: 100% 100%;">d</button>
+            <button class="drum" id="drum"
+                style="background-image: url(./Drum_Kit/images/tom2.png); background-size: 100% 100%;">j</button>
+            <button class="drum" id="drum"
+                style="background-image: url(./Drum_Kit/images/tom3.png); background-size: 100% 100%;">k</button>
+            <button class="drum" id="drum"
+                style="background-image: url(./Drum_Kit/images/tom4.png); background-size: 110% 120%;">l</button>
+        </div>
+
+    </div>
+
+    <script>
+
+        let buttonSize = document.getElementsByClassName("drum")
+
+
+        for (let i = 0; i < buttonSize.length; i++) {
+            buttonSize[i].addEventListener("click", () => {
+                playSound(buttonSize[i].innerHTML)
+            })
+
+        }
+
+        function playSound(letter) {
+            if (letter == 'w') {
+                const audio = new Audio('Drum_Kit/sounds/crash.mp3')
+                audio.play()
+            }
+            else if (letter == 'a') {
+                const audio = new Audio('Drum_Kit/sounds/kick-bass.mp3')
+                audio.play()
+            }
+            else if (letter == 's') {
+                const audio = new Audio('Drum_Kit/sounds/snare.mp3')
+                audio.play()
+            }
+            else if (letter == 'd') {
+                const audio = new Audio('Drum_Kit/sounds/crock.mp3')
+                audio.play()
+            }
+            else if (letter == 'j') {
+                const audio = new Audio('Drum_Kit/sounds/buzz.mp3')
+                audio.play()
+            }
+            else if (letter == 'k') {
+                const audio = new Audio('Drum_Kit/sounds/buzzer.mp3')
+                audio.play()
+            }
+            else if (letter == 'l') {
+                const audio = new Audio('Drum_Kit/sounds/pin.mp3')
+                audio.play()
+            }
+        }
+    </script>
+</body>
+
+</html>

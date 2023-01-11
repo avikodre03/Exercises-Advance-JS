@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<style>
+  .mainContainer {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #head1 {
+    /* border: 2px solid red; */
+    height: fit-content;
+    width: 35%;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 2px 2px 5px black;
+    font-size: 40px;
+  }
+
+  #head2 {
+
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 60px;
+    color: #56ba77;
+  }
+
+  @media only screen and (min-width: 320px) and (max-width:385px) {
+    #head1 {
+      font-size: 30px;
+    }
+  }
+</style>
+
+<body>
+  <div class="mainContainer">
+    <h1 id="head1">Press any Key board Key</h1>
+    <h2 id="head2"></h2>
+
+  </div>
+  <script>
+
+    // Add event listener on keypress
+    document.addEventListener("keypress", (event) => {
+      var name = event.key;
+
+
+      var charCode = event.charCode;
+      let head1 = document.getElementById("head1");
+      let head2 = document.getElementById("head2");
+      head2.style.boxShadow = "2px 2px 7px black"
+      head1.innerHTML = `You have Pressed `;
+      head2.innerHTML = charCode
+
+      var a = document.createElement("a")
+      head1.appendChild(a)
+      a.innerHTML = name
+      a.style.color = "#56ba77"
+      head2.appendChild(codediv)
+
+    })
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.maicontainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://thumbs.dreamstime.com/b/fruits-background-food-photography-different-types-wooden-copy-space-high-resolution-product-isolated-colorful-concept-191464762.jpg);
+    background-size: cover;
+}
+
+.bill {
+    width: 25%;
+    height: 95%;
+    box-shadow: 5px 20px 20px 1px gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+h1 {
+    color: #6c2625;
+}
+
+label {
+    color: #6c2625;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.heading {
+    width: 85%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid gray;
+}
+
+hr {
+    background-color: black;
+}
+
+.inputs {
+    width: 85%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.input1 {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    align-items: flex-start;
+}
+
+.input1 p {
+    width: 60%;
+    height: 50%;
+    color: #6c2625;
+    font-weight: bold;
+}
+
+.input1 p input {
+    width: 60%;
+    height: 100%;
+    padding-left: .5rem;
+    margin: .2rem;
+
+
+}
+
+
+.input2 {
+    width: 100%;
+    height: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    align-items: flex-start;
+
+}
+
+.input2 select {
+    width: 65%;
+    height: 45%;
+    padding-left: .5rem;
+
+
+}
+
+.input3 {
+    width: 100%;
+    height: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+
+}
+
+.input3 label input {
+    width: 40%;
+    height: 80%;
+    margin-top: 10px;
+    padding-left: .5rem;
+
+
+}
+
+button {
+    width: 100%;
+    height: 15%;
+    border: 2px solid black;
+    font-size: 1rem;
+    background-color: #6c2625;
+    margin-top: 1rem;
+    color: white;
+
+}
+
+.result {
+    width: 80%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+#resulth1 {
+    text-align: center;
+}
+
+.result p {
+    color: #6c2625;
+    font-weight: bold;

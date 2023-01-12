@@ -1,52 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        body {
             display: flex;
             flex-direction: column;
         }
-        input , button{
+
+        input,
+        button {
             height: 30px;
             width: 200px;
-            margin: 1rem;
-           
+            /* margin: 1rem; */
+
+
+        }
+
+        .error {
+            border: 2px solid red;
+            outline: 2px solid red;
+        }
+        #helperText1{
+            color: red;
         }
     </style>
 </head>
+
 <body>
-<input type="text" onkeyup="inputValueChange()" id="name" placeholder="enter your name">
-<input type="text" onkeyup="inputValueChange()" id="email" placeholder="enter your email">
-<input type="text" onkeyup="inputValueChange()" id="gender" placeholder="enter your gender">
-<input type="text" onkeyup="inputValueChange()" id="phno" placeholder="enter your PhoneNumber">
+    <input type="text" onkeyup="inputValueChange()" id="name" placeholder="enter your name">
+     <p id="helperText1"></p>
+    <input type="text" onkeyup="inputValueChange()" id="email" placeholder="enter your email">
+    <input type="text" onkeyup="inputValueChange()" id="gender" placeholder="enter your gender">
+    <input type="text" onkeyup="inputValueChange()" id="phno" placeholder="enter your PhoneNumber">
 
-<button id="submitbutton" disabled="true" >Submit</button>
+    <button onclick="submitData()" id="submitbutton">Submit</button>
 
-<script>
-    const name = document.getElementById("name")
-    const email = document.getElementById("email")
-    const gender = document.getElementById("gender")
-    const phno = document.getElementById("phno")
-  
+    <script>
+        const name = document.getElementById("name")
+        const email = document.getElementById("email")
+        const gender = document.getElementById("gender")
+        const phno = document.getElementById("phno")
 
-    const button = document.getElementById("submitbutton")
-console.log(button);
 
-    function inputValueChange(){
-        console.log("hello");
-
-        if((name.value==="" || name.value. )|| email.value==="" || gender.value==="" || phno.value===""){
-          
-            button.setAttribute("disabled", "true")
-        }else{
-            button.removeAttribute("disabled","true")
-    
+        const button = document.getElementById("submitbutton")
+        const error = {
+            name: true,
+            email: true,
+            gender: true,
+            phno: true
         }
-    }
-</script>
+         
+        function inputValueChange() {
+            const helperText1 = document.getElementById("helperText1")
+
+            if (name.value === "") {
+                error.name = true
+                name.classList.add("error")
+                helperText1.innerText="value empty"
+            } else {
+                error.name = false
+                name.classList.remove("error")
+                helperText1.innerText=""
+                if (name.value.length < 3) {
+                    error.name = true
+                    name.classList.add("error")
+                    helperText1.innerText="value should be greater than 3"
+                } else {
+                    error.name = false
+                    name.classList.remove("error")
+                    helperText1.innerText=""
+                    if (/^[a-zA-Z ]*$/.test(name.value) == false) {
+                        error.name = true
+                        name.classList.add("error")
+                        helperText1.innerText="please enter valid name"
+                    } else {
+                        error.name = false
+                        name.classList.remove("error")
+                        helperText1.innerText=""
+                    }
+                }
+            }
+
+            if ((email.value === "" || /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3}[a-zA-Z\s])+$/.test(email.value) == false)) {
+                error.email = true
+                email.classList.add("error")
+            } else {
+                error.email = false
+                email.classList.remove("error")
+            }
+
+            if ((gender.value === "" || (gender.value.toLowerCase() != "male" && gender.value.toLowerCase() != "female"))) {
+                error.gender = true
+                gender.classList.add("error")
+            } else {
+                error.gender = false
+                gender.classList.remove("error")
+            }
+
+            if ((phno.value === "" || /^\w{9}\d+$/.test(phno.value) == false || phno.value.length > 10)) {
+                error.phno = true
+                phno.classList.add("error")
+
+            } else {
+                error.phno = false
+                phno.classList.remove("error")
+
+            }
+            console.log(error);
+
+
+
+        }
+        function submitData() {
+            if (error.name == true || error.email == true || error.gender == true || error.phno == true) {
+
+                name.classList.add("error")
+                email.classList.add("error")
+                gender.classList.add("error")
+                phno.classList.add("error")
+
+
+
+
+            } else {
+
+                console.log("submitbutton click");
+            }
+        }
+    </script>
 </body>
+
 </html>

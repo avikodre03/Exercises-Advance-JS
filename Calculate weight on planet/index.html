@@ -35,12 +35,14 @@
     .input,
     select,
     button {
-      padding: .5rem;
+      padding: .6rem;
       margin: 10px;
     }
 
     button {
       cursor: pointer;
+      background-color: palevioletred;
+      border-radius: 5px;
     }
 
     input {
@@ -72,9 +74,9 @@
 <body>
   <h1 id="heading">🌎Calculate a weight of an Object on a planet🪐</h1>
   <div class="input">
-    <input id="inputWeight" type="number" placeholder="enter a mass">
+    <input id="inputWeight" type="number" placeholder="Mass in Kilogram">
     <select name="selectPlanet" id="selectPlanet">
-      <option disabled selected value="choose">--Choose planet--</option>
+      <option disabled selected value="choose">--Select Planet--</option>
     </select>
     <button onclick="clcWight()">Calculate weight</button>
   </div>

@@ -21,6 +21,9 @@ https://avikodre03.github.io/Exercises-Advance-JS/AdvanceJS-403-01/index
 AdvanceJS-403-02
 https://avikodre03.github.io/Exercises-Advance-JS/AdvanceJS-403-02/index
 
+AdvanceJS-403-03
+https://avikodre03.github.io/Exercises-Advance-JS/AdvanceJS-403-03/index
+
 Calculate weight on planet
 https://avikodre03.github.io/Exercises-Advance-JS/Calculate%20weight%20on%20planet/index
 

@@ -18,19 +18,19 @@ function startingSearchFunction() {
 
     const matchedCountries = []
 
-//  using map >>>>>>>>>>>>>>>
-    CountriesName.map((ele) =>{
-         const hello = ele.startsWith(input.toLowerCase())
-         if (input == "") {   
+    //  using map >>>>>>>>>>>>>>>
+    CountriesName.map((ele) => {
+        const hello = ele.startsWith(input.toLowerCase())
+        if (input == "") {
             countryCardContanr.innerHTML = `
                 <div style="background-color:red; color:white; height: fit-content;" >
                     <h1>Please enter a word</h1>
                 </div>
                 `
-        } else{
+        } else {
 
             if (hello) {
-    
+
                 matchedCountries.push(ele)
                 countryCardContanr.innerHTML +=
                     `<div class="countryCardContanrdiv", >
@@ -70,27 +70,27 @@ function searchAnyWord() {
     const matchedCountries = []
 
     // using map >>>>>>>>>>>>>>>
-    CountriesName.map((ele) =>{
+    CountriesName.map((ele) => {
         const hello = ele.includes(input.toLowerCase())
-        if (input == "") {   
+        if (input == "") {
             countryCardContanr.innerHTML = `
-                <div style="background-color:red; color:white">
+                <div style="background-color:red; color:white; height: fit-content;">
                     <h1>Please enter a word</h1>
                 </div>
                 `
-        } else{
+        } else {
 
-        if (hello) {
+            if (hello) {
 
-            matchedCountries.push(ele)
-            countryCardContanr.innerHTML +=
-                `<div class="countryCardContanrdiv", >
+                matchedCountries.push(ele)
+                countryCardContanr.innerHTML +=
+                    `<div class="countryCardContanrdiv", >
            <p>${ele.toUpperCase()}</p>
            </div>`
-        }
+            }
 
-        const numberofSearchResult = document.getElementById("numberOfSearchResult")
-    }
+            const numberofSearchResult = document.getElementById("numberOfSearchResult")
+        }
     })
 
     // for (let i = 0; i < CountriesName.length; i++) {

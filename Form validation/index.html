@@ -6,133 +6,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-        }
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
 
-        input,
-        button {
-            height: 30px;
-            width: 200px;
-            /* margin: 1rem; */
-
-
-        }
-
-        .error {
-            border: 2px solid red;
-            outline: 2px solid red;
-        }
-        #helperText1{
-            color: red;
-        }
-    </style>
 </head>
 
 <body>
-    <input type="text" onkeyup="inputValueChange()" id="name" placeholder="enter your name">
-     <p id="helperText1"></p>
-    <input type="text" onkeyup="inputValueChange()" id="email" placeholder="enter your email">
-    <input type="text" onkeyup="inputValueChange()" id="gender" placeholder="enter your gender">
-    <input type="text" onkeyup="inputValueChange()" id="phno" placeholder="enter your PhoneNumber">
+    <div class="mainContainer">
+        <h1>Validating Web Form</h1>
+        <div class="inputDiv">
 
-    <button onclick="submitData()" id="submitbutton">Submit</button>
+            <h3>First Name</h3>
+            <input type="text" maxlength="16" onkeyup="inputValueChange()" id="firstName"
+                placeholder="enter your Firstname">
+            <p id="helperText1">First name must be alphanumeric and contain 3 - 16 characters</p>
 
-    <script>
-        const name = document.getElementById("name")
-        const email = document.getElementById("email")
-        const gender = document.getElementById("gender")
-        const phno = document.getElementById("phno")
+            <h3>Last Name</h3>
+            <input type="text" maxlength="16" onkeyup="inputValueChange()" id="lastName"
+                placeholder="enter your Lastname">
+            <p id="helperText6">Last name must be alphanumeric and contain 3 - 16 characters</p>
 
+            <h3>Email</h3>
+            <input type="text" onkeyup="inputValueChange()" id="email" placeholder="enter your email">
+            <p id="helperText2">Email must be valid address, e.g. example@example.com</p>
 
-        const button = document.getElementById("submitbutton")
-        const error = {
-            name: true,
-            email: true,
-            gender: true,
-            phno: true
-        }
-         
-        function inputValueChange() {
-            const helperText1 = document.getElementById("helperText1")
+            <h3>password</h3>
+            <input type="password" onkeyup="inputValueChange()" id="password" placeholder="enter your password">
+            <p id="helperText3">password must be alphanumeric & numeric digit (@, _ and - are also allowed)<br>and
+                between 6-20 characters</p>
 
-            if (name.value === "") {
-                error.name = true
-                name.classList.add("error")
-                helperText1.innerText="value empty"
-            } else {
-                error.name = false
-                name.classList.remove("error")
-                helperText1.innerText=""
-                if (name.value.length < 3) {
-                    error.name = true
-                    name.classList.add("error")
-                    helperText1.innerText="value should be greater than 3"
-                } else {
-                    error.name = false
-                    name.classList.remove("error")
-                    helperText1.innerText=""
-                    if (/^[a-zA-Z ]*$/.test(name.value) == false) {
-                        error.name = true
-                        name.classList.add("error")
-                        helperText1.innerText="please enter valid name"
-                    } else {
-                        error.name = false
-                        name.classList.remove("error")
-                        helperText1.innerText=""
-                    }
-                }
-            }
+            <h3>Telephone</h3>
+            <input type="text" maxlength="12" onkeyup="inputValueChange()" id="phno"
+                placeholder="enter your Telephone number">
+            <p id="helperText4">A valid Telephone number(10 digits and 333-333-3334)</p>
 
-            if ((email.value === "" || /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3}[a-zA-Z\s])+$/.test(email.value) == false)) {
-                error.email = true
-                email.classList.add("error")
-            } else {
-                error.email = false
-                email.classList.remove("error")
-            }
+            <h3>Your bio</h3>
+            <input type="text" maxlength="50" onkeyup="inputValueChange()" id="bio" placeholder="enter your bio">
+            <p id="helperText7">bio must be contain only lowercase letters, underscores, hyphens and be 8-50 characters
+            </p>
+            <br>
 
-            if ((gender.value === "" || (gender.value.toLowerCase() != "male" && gender.value.toLowerCase() != "female"))) {
-                error.gender = true
-                gender.classList.add("error")
-            } else {
-                error.gender = false
-                gender.classList.remove("error")
-            }
-
-            if ((phno.value === "" || /^\w{9}\d+$/.test(phno.value) == false || phno.value.length > 10)) {
-                error.phno = true
-                phno.classList.add("error")
-
-            } else {
-                error.phno = false
-                phno.classList.remove("error")
-
-            }
-            console.log(error);
+            <p id="helperText5"></p>
+            <button onclick="submitData()" id="submitbutton">Submit</button>
+        </div>
+    </div>
 
 
-
-        }
-        function submitData() {
-            if (error.name == true || error.email == true || error.gender == true || error.phno == true) {
-
-                name.classList.add("error")
-                email.classList.add("error")
-                gender.classList.add("error")
-                phno.classList.add("error")
-
-
-
-
-            } else {
-
-                console.log("submitbutton click");
-            }
-        }
-    </script>
 </body>
 
 </html>

@@ -30,6 +30,9 @@ https://avikodre03.github.io/Exercises-Advance-JS/Calculate%20weight%20on%20plan
 Calculator
 https://avikodre03.github.io/Exercises-Advance-JS/Calculator/index
 
+Form validation
+https://avikodre03.github.io/Exercises-Advance-JS/Form%20validation/index
+
 World Countries Data
 https://avikodre03.github.io/Exercises-Advance-JS/World%20Countries%20Data/index
 

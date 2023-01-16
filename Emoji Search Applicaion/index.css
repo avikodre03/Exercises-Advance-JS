@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+hr {
+    border: 2px solid white;
+    display: block;
+    unicode-bidi: isolate;
+    margin-inline-start: .5rem;
+    margin-inline-end: .5rem;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+
+input {
+    height: 30px;
+    width: 220px;
+    font-size: 18px;
+    margin: 2rem 0;
+}
+
+button {
+    height: 30px;
+    width: 80px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 2rem 0;
+    background-color: white;
+
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid white
+}
+
+table {
+    width: 100%;
+    border: 1px solid gray;
+    border-collapse: collapse;
+    font-size: 22px;
+    border-left: transparent;
+    border-bottom: transparent;
+    border-right: transparent;
+    font-family: 'Roboto Mono', monospace;
+
+
+}
+
+#emojiIcons {
+    font-size: 45px;
+    padding-left: 1rem;
+}
+
+.tableRow {
+    width: 100%;
+    border: .5px solid gray;
+    border-left: transparent;
+    border-top: transparent;
+    border-right: transparent;
+}
+
+td {
+   
+    padding: .5rem 0;
+}

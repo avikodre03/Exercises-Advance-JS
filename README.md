@@ -33,6 +33,9 @@ https://avikodre03.github.io/Exercises-Advance-JS/Calculator/index
 Form validation
 https://avikodre03.github.io/Exercises-Advance-JS/Form%20validation/index
 
+LeaderBoard
+https://avikodre03.github.io/Exercises-Advance-JS/LeaderBoard/index
+
 Emoji Search Applicaion
 https://avikodre03.github.io/Exercises-Advance-JS/Emoji%20Search%20Applicaion//index
 

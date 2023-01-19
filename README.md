@@ -33,6 +33,9 @@ https://avikodre03.github.io/Exercises-Advance-JS/Calculator/index
 Form validation
 https://avikodre03.github.io/Exercises-Advance-JS/Form%20validation/index
 
+Github Finder
+https://avikodre03.github.io/Exercises-Advance-JS/Github%20Finder/index
+
 LeaderBoard
 https://avikodre03.github.io/Exercises-Advance-JS/LeaderBoard//index
 

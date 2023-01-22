@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <div class="outerMostContainer">
+
+        <div class="heading">
+            <h1>Weather App Using JavaScript</h1>
+        </div>
+        <div class="searchContainer">
+            <input type="text" id="input" placeholder="*City Name">
+            <button onclick="func()">Submit</button>
+        </div>
+        <h1 id="alert"></h1>
+        <div id="card">
+            <h2 id="dynamicHeading"></h2>
+            <div class="cardDetail">
+
+                <p id="skyCondition"></p>
+                <p id="Temperature"></p>
+                <p id="windSpeed"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

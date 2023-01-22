@@ -7,11 +7,13 @@
 body {
     background-color: #ffb6a9;
 }
+
 hr {
     height: 4px;
-   background-color: black;
-   /* margin-bottom: 1rem; */
+    background-color: black;
+    /* margin-bottom: 1rem; */
 }
+
 .cardContainer {
     height: 100vh;
     width: 100%;
@@ -28,7 +30,7 @@ hr {
     background-color: #ffcdc2;
     border-radius: 15px;
     box-shadow: 0px 6px 5px 4px #e82c27;
-    
+
 }
 
 .cardQuote {
@@ -82,4 +84,52 @@ hr {
     width: 10%;
     border-radius: 5px;
 
+}
+
+@media only screen and (min-width:768px) and (max-width:1025px) {
+    .card {
+        width: 65%;
+    }
+
+    .buttonContainer button {
+
+        width: 21%;
+    }
+}
+
+@media only screen and (min-width:768px) and (max-width:950px) {
+    .buttonContainer button {
+        width: 25%;
+    }
+
+    .cardQuote h1 {
+        font-size: 30px;
+    }
+
+    .cardQuote h4 {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:767px) {
+    .card {
+        width: 95%;
+    }
+
+    .buttonContainer button {
+        width: 35%;
+        font-size: 14px;
+    }
+
+    .buttonContainer img {
+        width: 25%;
+    }
+
+    .cardQuote h1 {
+        font-size: 20px;
+    }
+
+    .cardQuote h4 {
+        font-size: 10px;
+    }
 }

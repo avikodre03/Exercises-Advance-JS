@@ -1,0 +1,128 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #5080fe;
+}
+
+.outerMostContainer {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.heading {
+    font-size: 25px;
+    background-color: white;
+    width: 60%;
+    text-align: center;
+    padding: 5px;
+}
+
+.searchContainer {
+    height: 30%;
+    width: 30%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.searchContainer input {
+    height: 25%;
+    width: 70%;
+    margin: 1rem;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.searchContainer button {
+    height: 25%;
+    width: 30%;
+    background-color: #245dc7;
+    border: none;
+    font-size: 20px;
+    color: white;
+    font-weight: bolder;
+}
+
+#alert {
+    color: white;
+    text-shadow: 1px 1px 2px red;
+}
+
+.card {
+    /* border: 2px solid red; */
+    height: 40%;
+    width: 30%;
+    background-color: white;
+}
+
+#dynamicHeading {
+    height: 20%;
+    width: 100%;
+    background-color: #1e3cb6;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardDetail {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+@media only screen and (min-width:768px) and (max-width:1025px) {
+    .heading {
+        width: 80%;
+    }
+
+    .searchContainer,
+    .card {
+        width: 40%;
+    }
+
+    .cardDetail {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (min-width:320px) and (max-width:768px) {
+    .heading {
+        width: 90%;
+        font-size: 15px;
+    }
+
+    .searchContainer input {
+        font-size: 18px;
+        width: 80%;
+    }
+
+    .searchContainer button {
+        font-size: 18px;
+        width: 60%;
+    }
+
+    .searchContainer,
+    .card {
+        width: 80%;
+    }
+
+    .cardDetail {
+        font-size: 22px;
+    }
+}

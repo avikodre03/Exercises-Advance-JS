@@ -47,3 +47,12 @@ https://avikodre03.github.io/Exercises-Advance-JS/World%20Countries%20Data/index
 
 World Countries List
 https://avikodre03.github.io/Exercises-Advance-JS/World%20Countries%20List/index
+
+Meal finder
+https://avikodre03.github.io/Exercises-Advance-JS/Meal%20finder/index
+
+Quote Generator
+https://avikodre03.github.io/Exercises-Advance-JS/Quote%20Generator/index
+
+Weather App
+https://avikodre03.github.io/Exercises-Advance-JS/Weather%20App/index

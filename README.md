@@ -33,6 +33,8 @@ https://avikodre03.github.io/Exercises-Advance-JS/Calculator/index
 Form validation
 https://avikodre03.github.io/Exercises-Advance-JS/Form%20validation/index
 
+https://avikodre03.github.io/Exercises-Advance-JS/Dictionary%20app/index
+
 Github Finder
 https://avikodre03.github.io/Exercises-Advance-JS/Github%20Finder//index
 
@@ -56,3 +58,6 @@ https://avikodre03.github.io/Exercises-Advance-JS/Quote%20Generator/index
 
 Weather App
 https://avikodre03.github.io/Exercises-Advance-JS/Weather%20App/index
+
+Dictionary app
+https://avikodre03.github.io/Exercises-Advance-JS/Dictionary%20app/index
